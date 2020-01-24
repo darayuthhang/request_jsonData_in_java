@@ -27,6 +27,7 @@ public class RequestJson {
                 responContext.append(inputLine);
             }
             readJson(responContext.toString());
+            //catch invalid protocol or http
         }catch (MalformedURLException e){
             System.out.println(e.getMessage());
         }catch (IOException e){
