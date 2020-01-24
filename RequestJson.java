@@ -20,6 +20,7 @@ public class RequestJson {
             //if you cannot connect the response code will
             //catch IOException
             int reponse = connection.getResponseCode();
+            //consume less memory and very fast when cocat the string.
             StringBuilder responContext = new StringBuilder();
             BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String inputLine;
