@@ -12,10 +12,9 @@ import java.net.URL;
 
 public class RequestJson {
     public static void main(String[] args) {
-        String urlx = "https://www.hopper.com/careers/software-engineer---mobile---hotels-7ad6f88c-a750-40a5-91d7-b40f46d52fa7";
+      
         try{
-            //URL url = new URL("https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
-            URL url = new URL(urlx);
+            URL url = new URL("https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             //get reponse code whether you can connect or not
             //if you cannot connect the response code will
@@ -42,9 +41,7 @@ public class RequestJson {
         JSONArray weatherObject = jsonObject.getJSONArray("weather");
         JSONObject weather = weatherObject.getJSONObject(0);
         String main = weather.getString("main");
-//        JSONObject arrObject = new JSONObject(weatherObject);
-//        String main = arrObject.getString("main");
-//        System.out.println(main);
+
 
     }
 }
